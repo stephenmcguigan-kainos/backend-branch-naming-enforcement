@@ -15,6 +15,6 @@ jobs:
                 echo "Validating branch name against naming conventions"
                 branch=$GITHUB_HEAD_REF
                 echo "Branch name: ${branch}"
-                regex_branch_name='(^develop$|^main$|^ticket-[0-9]{3,}(-[A-Za-z0-9]{1,}){1,}$|^version-[0-9]{1}(\.[0-9]){2,3}$)'
+                regex_branch_name='(^develop$|^main$|^ticket-[0-9]{3,}(-[A-Za-z0-9]{1,}){1,}$|^version-[0-9]{1,}(\.[0-9]{1,}){2,3}$)'
                 [[ $branch =~ $regex_branch_name ]]
                 exit $?
